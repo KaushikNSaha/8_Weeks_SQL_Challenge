@@ -62,7 +62,7 @@ INSERT INTO menu VALUES
 
 
 -- The final members table captures the join_date when a customer_id 
--- joined the beta version of the Danny’s Diner loyalty program.
+-- joined the beta version of the Dannyâ€™s Diner loyalty program.
 
 INSERT INTO members VALUES
 ('A', '2021-01-07'),
@@ -98,9 +98,9 @@ ORDER BY 2 DESC;
 /* Solution
 
 customer_id		amount_spent
-		A			76
-		B			74
-		C			36
+	A			76
+	B			74
+	C			36
 
 The solution shows that customer A spent the most $76 during his visit to Danny's Diner.
 */
@@ -124,9 +124,9 @@ order by 2 desc;
 
 /* Solution
 customer_id    days_visited
-		B			6
-		A			4
-		C			2
+B			6
+A			4
+C			2
 
 */
 
@@ -156,9 +156,9 @@ Where item_ordered = 1;
 /* Solution
 
 cus_id	first_item_ordered
-	A		sushi
-	B		curry
-	C		ramen
+A		sushi
+B		curry
+C		ramen
 
 */
 
@@ -219,13 +219,13 @@ order by 3 DESC;
 /* Solution
 
 cus_id	item_name	times_ordered
-	A	 ramen			3
-	C	 ramen			3
-	B	 sushi			2
-	B	 ramen			2
-	A	 curry			2
-	B	 curry			2
-	A	 sushi			1
+A	 ramen			3
+C	 ramen			3
+B	 sushi			2
+B	 ramen			2
+A	 curry			2
+B	 curry			2
+A	 sushi			1
 
 It seems Ramen is most popular item for Customer A and C whereas customer B ordered all the
 items equally.
@@ -268,8 +268,8 @@ WHERE Rank = 1;
 
 /*
 customer	membership_date		order_date		item_ordered
-	A			1/7/2021		1/10/2021			ramen
-	B			1/9/2021		1/11/2021			sushi
+A		1/7/2021		1/10/2021			ramen
+B		1/9/2021		1/11/2021			sushi
 
 After becoming a member customer A bought 'Ramen' while customer B bought 'Sushi'.
 */
@@ -311,9 +311,9 @@ WHERE Rank = 1;
 /* Solution
 
 customer	membership_date		order_date		item_ordered
-	A		 1/7/2021			 1/1/2021		 sushi
-	A		 1/7/2021			 1/1/2021		 curry
-	B		 1/9/2021			 1/4/2021		 sushi
+A		 1/7/2021		1/1/2021		 sushi
+A		 1/7/2021		1/1/2021		 curry
+B		 1/9/2021		1/4/2021		 sushi
 
 The solution shows that Customer B bought Sushi before he became a member 
 while Customer A bought both Curry and Sushi.
@@ -356,8 +356,8 @@ order by spent_before_membership DESC;
 /* Solution
 
 customer	membership_date		spent_before_membership
-	B			1/9/2021				40
-	A			1/7/2021				25
+B		1/9/2021				40
+A		1/7/2021				25
 
 Customer B spent $40 before he/she became a member while Customer A spent $25 
 before becoming a member.
@@ -400,9 +400,9 @@ order by 2 DESC;
 
 /*
 customer	points_earned
-	B			940
-	A			860
-	C			360
+B			940
+A			860
+C			360
 
 Seems to me that Customer B earned the highest 940 points.
 
@@ -464,8 +464,8 @@ order by 2 DESC;
 /* Solution
 
 customer	members_point
-	A			1370
-	B			940
+A			1370
+B			940
 
 Seems to me that Customer A is the clever one. He purchased A lot of items during 1 week
 after he/she become a loyal member. 
@@ -504,21 +504,21 @@ FULL OUTER JOIN Dannys_Diner..menu m
 /* Solution
 
 customer_id		order_date		product_name	price	member
-	A			1/1/2021			sushi		 10		 N
-	A			1/1/2021			curry		 15		 N
-	A			1/7/2021			curry		 15		 Y
-	A			1/10/2021			ramen		 12		 Y
-	A			1/11/2021			ramen		 12		 Y
-	A			1/11/2021			ramen		 12		 Y
-	B			1/1/2021			curry		 15		 N
-	B			1/2/2021			curry		 15		 N
-	B			1/4/2021			sushi		 10		 N
-	B			1/11/2021			sushi		 10		 Y
-	B			1/16/2021			ramen		 12		 Y
-	B			2/1/2021			ramen		 12		 Y
-	C			1/1/2021			ramen		 12		 N
-	C			1/1/2021			ramen		 12		 N
-	C			1/7/2021			ramen		 12		 N
+A			1/1/2021		sushi		 10	 N
+A			1/1/2021		curry		 15	 N
+A			1/7/2021		curry		 15	 Y
+A			1/10/2021		ramen		 12	 Y
+A			1/11/2021		ramen		 12	 Y
+A			1/11/2021		ramen		 12	 Y
+B			1/1/2021		curry		 15	 N
+B			1/2/2021		curry		 15	 N
+B			1/4/2021		sushi		 10	 N
+B			1/11/2021		sushi		 10	 Y
+B			1/16/2021		ramen		 12	 Y
+B			2/1/2021		ramen		 12	 Y
+C			1/1/2021		ramen		 12	 N
+C			1/1/2021		ramen		 12	 N
+C			1/7/2021		ramen		 12	 N
 
 */
 
@@ -564,21 +564,21 @@ FULL OUTER JOIN Dannys_Diner..menu m
 /* Solution
 
 customer_id		order_date	product_name	price	member	ranking
-	A			1/1/2021		sushi		10		 N		 NULL
-	A			1/1/2021		curry		15		 N		 NULL
-	A			1/7/2021		curry		15		 Y		 3
-	A			1/10/2021		ramen		12		 Y		 4
-	A			1/11/2021		ramen		12		 Y		 5
-	A			1/11/2021		ramen		12		 Y		 5
-	B			1/1/2021		curry		15		 N		 NULL
-	B			1/2/2021		curry		15		 N		 NULL
-	B			1/4/2021		sushi		10		 N		 NULL
-	B			1/11/2021		sushi		10		 Y		 4
-	B			1/16/2021		ramen		12		 Y		 5
-	B			2/1/2021		ramen		12		 Y		 6
-	C			1/1/2021		ramen		12		 N		 NULL
-	C			1/1/2021		ramen		12		 N		 NULL
-	C			1/7/2021		ramen		12		 N		 NULL
+A			1/1/2021	sushi		10	 N	 NULL
+A			1/1/2021	curry		15	 N	 NULL
+A			1/7/2021	curry		15	 Y	 3
+A			1/10/2021	ramen		12	 Y	 4
+A			1/11/2021	ramen		12	 Y	 5
+A			1/11/2021	ramen		12	 Y	 5
+B			1/1/2021	curry		15	 N	 NULL
+B			1/2/2021	curry		15	 N	 NULL
+B			1/4/2021	sushi		10	 N	 NULL
+B			1/11/2021	sushi		10	 Y	 4
+B			1/16/2021	ramen		12	 Y	 5
+B			2/1/2021	ramen		12	 Y	 6
+C			1/1/2021	ramen		12	 N	 NULL
+C			1/1/2021	ramen		12	 N	 NULL
+C			1/7/2021	ramen		12	 N	 NULL
 
 The last solution doesn't match the required output provided by Danny Ma.
 Feel free to add your opinion in this question.
