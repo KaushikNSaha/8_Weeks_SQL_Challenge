@@ -1,4 +1,14 @@
--- create database Danny's Diner
+-- ============================================================
+--   8 WEEK SQL CHALLENGE | CASE STUDY #1 — DANNY'S DINER
+--   Challenge by Danny Ma | https://8weeksqlchallenge.com
+--   Tool: Microsoft SQL Server (T-SQL)
+--   Author: Kaushik Nandan Saha
+-- ============================================================
+
+
+-- ============================================================
+-- SECTION 1: DATABASE SETUP
+-- ============================================================
 
 CREATE DATABASE Dannys_Diner;
 
@@ -77,6 +87,9 @@ From Dannys_Diner..menu;
 select * 
 From Dannys_Diner..members;
 
+-- ============================================================
+-- SECTION 2: CASE STUDY QUESTIONS
+-- ============================================================
 
 -- CASE STUDY QUESTION 01
 -- What is the total amount each customer spent at the restaurant?
